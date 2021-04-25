@@ -1,0 +1,25 @@
+<style type="text/css">
+    .jumbotron {
+      padding: 4rem 2rem;
+      margin-bottom: 2rem;
+      background-color: var(--bs-light);
+      border-radius: .3rem;  
+    }
+</style>
+
+<div class="jumbotron">
+  <h1 class="display-4">
+    <%= @friend.first_name %>
+    <%= @friend.last_name %>
+  </h1>
+  
+  <p>
+    <%= @friend.email %> | <%= @friend.phone %> | <%= @friend.twitter %>
+  </p>
+
+  <br/>
+  <%= link_to 'Edit', edit_friend_path(@friend), class:"btn btn-secondary" %>
+  <%= link_to 'Back', friends_path, class:"btn btn-dark" %>
+</div>
+
+
